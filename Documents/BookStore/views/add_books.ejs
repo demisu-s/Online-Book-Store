@@ -1,0 +1,81 @@
+<%-include('layouts/header', { includeCss: false}) %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 mx-auto mt-4">
+      <div class="card shadow">
+        <div class="card-header bg-primary">
+          <h3 class="text-light">Add New Book</h3>
+        </div>
+        <div class="card-body p-4">
+          <form
+            action="/add"
+            method="post"
+            id="add-form"
+            enctype="multipart/form-data"
+          >
+            <div class="nb-3">
+              <label for="name">Title</label>
+              <input
+                type="text"
+                name="title"
+                class="form-control form-control-lg"
+                placeholder="Enter book title"
+                required
+              />
+            </div> 
+            <div class="nb-3">
+                <label for="name">Author</label>
+                <input
+                  type="text"
+                  name="author"
+                  class="form-control form-control-lg"
+                  placeholder="Enter Author name"
+                  required
+                />
+              </div> 
+            <div class="nb-3">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control form-control-lg"
+                placeholder="Enter Email"
+                required
+              />
+            </div>
+            <div class="nb-3">
+              <label for="phone">Phone</label>
+              <input
+                type="tel"
+                name="phone"
+                class="form-control form-control-lg"
+                placeholder="Enter phone number"
+                required
+              />
+            </div>
+            <div class="nb-3">
+              <label for="pdf" class="form-lable">Select PDF</label>
+              <input
+                class="form-control form-control-lg"
+                type="file"
+                name="pdf"
+                required
+              />
+            </div>
+            <div class="nb-3 d-grid">
+              <input
+                type="submit"
+                name="submit"
+                value="add Book"
+                class="btn btn-primary btn-lg"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%-include('layouts/footer') %>
